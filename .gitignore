@@ -2,6 +2,8 @@ target/
 .DS_Store
 .project
 .settings/
+.idea/
+*.iml
 .classpash
 pom.xml.tag
 pom.xml.releaseBackup

@@ -5,18 +5,5 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
 
-	<listener>
-		<listener-class>vn.cmcti.richard.sample.peeper.PeeperServletContextListener</listener-class>
-	</listener>
-	
-	<servlet>
-		<servlet-name>PeeperServlet</servlet-name>
-		<servlet-class>vn.cmcti.richard.sample.peeper.PeeperServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>PeeperServlet</servlet-name>
-		<url-pattern>/*</url-pattern>
-	</servlet-mapping>
+	<display-name>Sample Web with Cache</display-name>
 </web-app>
