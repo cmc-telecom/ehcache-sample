@@ -43,20 +43,24 @@
             <!-- SLF4J Logging with log4j -->
             <dependency>
                 <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
             <!-- EhCache -->
             <dependency>
-                <groupId>org.ehcache</groupId>
-                <artifactId>ehcache</artifactId>
+                <groupId>org.ehcache.modules</groupId>
+                <artifactId>ehcache-core</artifactId>
                 <version>${ehcache.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.ehcache.modules</groupId>
+                <artifactId>ehcache-api</artifactId>
+                <version>${ehcache.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

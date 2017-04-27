@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-	version="3.1">
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
 
-	<display-name>Sample Web with Cache</display-name>
+    <display-name>Sample Web with Cache</display-name>
+
+    <listener>
+        <listener-class>com.cmcti.richard.sample.peeper.PeeperServletContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>PeeperServlet</servlet-name>
+        <servlet-class>com.cmcti.richard.sample.peeper.PeeperServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PeeperServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
 </web-app>

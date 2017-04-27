@@ -24,8 +24,17 @@
 		</dependency>
 		<!-- EhCache -->
 		<dependency>
-			<groupId>org.ehcache</groupId>
-			<artifactId>ehcache</artifactId>
+			<groupId>org.ehcache.modules</groupId>
+			<artifactId>ehcache-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.ehcache.modules</groupId>
+			<artifactId>ehcache-impl</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.ehcache.modules</groupId>
+			<artifactId>ehcache-api</artifactId>
 		</dependency>
 		<!-- Logging -->
 		<dependency>
@@ -36,16 +45,5 @@
 
 	<build>
 		<finalName>web-cache</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven.plugin.compiler.version}</version>
-				<configuration>
-					<source>${compile.source}</source>
-					<target>${compile.target}</target>
-				</configuration>
-			</plugin>
-		</plugins>
 	</build>
 </project>
